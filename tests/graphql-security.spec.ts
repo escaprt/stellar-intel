@@ -1,11 +1,7 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { buildSchema, parse, validate } from 'graphql';
 import { typeDefs } from '@/lib/graphql/typeDefs';
-import {
-  graphqlValidationRules,
-  maxDepthRule,
-  maxFieldCountRule,
-} from '@/lib/graphql/security';
+import { graphqlValidationRules, maxDepthRule, maxFieldCountRule } from '@/lib/graphql/security';
 
 // The schema is built with `buildSchema(typeDefs)` so that `validate` uses the
 // same graphql instance.
